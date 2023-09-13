@@ -1,5 +1,6 @@
 {
   "name": "basic-template",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "",
@@ -15,8 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.22.6",
-    "@babel/core": "^7.22.8",
-    "@babel/preset-env": "^7.22.7",
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
     "eslint": "^8.38.0",
@@ -32,4 +34,5 @@
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
   }
+  
 }
