@@ -11,11 +11,16 @@ function reverse(str){
 }
 
 function ceaser(str, key){
+  const toLowerCase = str.toLowerCase();
   const characterArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   const encryptedMsg = [];
   for(let i = 0; i<str.length; i++){
-    const newCharIndex = characterArr.indexOf(str[i]) + key;
+    if(str[i] === ',' || str[i] === ' '|| str[i] === '.'){
+      encryptedMsg.push(str[i]);
+      continue;
+    }
+    const newCharIndex = characterArr.indexOf(toLowerCase[i]) + key;
     const newCharIndexMod26 = (newCharIndex % 26);
     const newCharacter = characterArr[newCharIndexMod26];
     encryptedMsg.push(newCharacter);
